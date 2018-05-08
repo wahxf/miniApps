@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container flex">
+  <view class="header">
+    <view class='sub_header'>
+      <view class='left l'>
+        <text class='rpx28'>北京</text>
+      </view>
+      <view class='right r'>
+        <view class='sort l'>
+          <text class='rpx28'>排序</text>
+        </view>
+        <view class='filtrate l'>
+          <text class='rpx28'>筛选</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="wrapper flex1"> -->
+    <scroll-view scroll-y="{{true}}" scroll-with-animation="{{true}}" bindscrolltolower="lower" class='scroll flex1'>
+      <view class='wrap'>
+    
+
+        <view class='item flex' wx:for="{{content}}" wx:key="{{index}}">
+          <view class='img'>
+            <image src='../img/1.jpg' lazy-load="{{true}}"></image>
+          </view>
+          <view class='content flex1'>
+            <view class='partTop'>
+              <text class='title'>{{item}}</text>
+              <view class='time flex'>
+                <text class='c6 flex1'>2013年-12万公里</text>
+                <text class='c9'>刚刚</text>
+              </view>
+              <view class='card'>证件已审</view>
+            </view>
+            <view class='partBottom'>
+              <text class='price'>10万</text>
+            </view>
+          </view>
+
+        </view>
+       
+        
+
+
+
+      </view> 
+    
+      <view class='load_more' wx:if="{{flag}}">
+        加载更多信息中...
+      </view>
+    </scroll-view>
+  <!-- </view> -->
+
+</view>
